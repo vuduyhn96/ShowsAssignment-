@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Hiển thị số nguyên tố</title>
+</head>
+<body>
+<script>
+    function isPrime(num) {
+        for (let i = 2; i < num; i++) {
+            if (num % i === 0) {
+                return false;
+            }
+        }
+        return num > 1;
+    }
+    function hienThiSoNguyenTo(number) {
+        let countSNT = 0;
+        for (let i = 2; countSNT < number; i++) {
+            if (isPrime(i)) {
+                document.write(i + "<br>");
+                countSNT++;
+            }
+        }
+    }
+    let number = parseInt(prompt("Nhập n số nguyên tố đầu tiên: "));
+    hienThiSoNguyenTo(number);
+</script>
+</body>
+</html>
